@@ -1,8 +1,14 @@
+import SEO from '../../components/SEO';
 import './About.css';
 
 function About() {
   return (
     <div className="about-page">
+      <SEO
+        title="About OrganicShop"
+        description="Learn about OrganicShop's mission to bring certified organic, sustainable products from Indian farms to your doorstep. Discover our story, values, and team."
+        url={window.location.origin + '/about'}
+      />
       {/* Hero Section */}
       <section className="about-hero">
         <div className="container">

@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { Link, useSearchParams, useNavigate } from 'react-router-dom';
+import SEO from '../../components/SEO';
 import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { useAuth } from '../../context/AuthContext';
@@ -170,6 +171,11 @@ function Products() {
 
   return (
     <div className="products-page">
+      <SEO
+        title="Shop Organic Products"
+        description="Browse OrganicShop's full range of organic fruits, vegetables, dairy, grains, nuts, and pantry staples. Filter, search, and discover products for a healthier lifestyle."
+        url={window.location.origin + '/products'}
+      />
       <div className="products-header">
         <div className="container">
           <h1 className="page-title">Our Products</h1>

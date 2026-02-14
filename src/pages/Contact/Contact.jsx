@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../../components/SEO';
 import './Contact.css';
 
 function Contact() {
@@ -25,6 +26,11 @@ function Contact() {
 
   return (
     <div className="contact-page">
+      <SEO
+        title="Contact OrganicShop"
+        description="Get in touch with OrganicShop for support, orders, partnerships, or feedback. Reach us via email, phone, or our contact form."
+        url={window.location.origin + '/contact'}
+      />
       {/* ========================================
           PAGE HEADER - Clean & Centered
           ======================================== */}

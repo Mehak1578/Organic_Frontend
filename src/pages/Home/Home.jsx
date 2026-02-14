@@ -3,6 +3,7 @@ import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { useAuth } from '../../context/AuthContext';
 import { products, categories } from '../../data/products';
+import SEO from '../../components/SEO';
 import './Home.css';
 
 function Home() {
@@ -29,6 +30,12 @@ function Home() {
 
   return (
     <div className="home">
+      <SEO
+        title="Fresh Organic Groceries & Wellness"
+        description="Discover curated organic groceries, fresh produce, and wellness essentials made for Indian lifestyles at OrganicShop. Fast delivery from trusted farms."
+        url={window.location.origin + '/'}
+        image="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80"
+      />
       {/* Hero Section */}
       <section className="hero">
         <div className="container">

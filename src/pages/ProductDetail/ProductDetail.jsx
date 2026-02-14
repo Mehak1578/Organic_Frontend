@@ -4,6 +4,7 @@ import { useCart } from '../../context/CartContext';
 import { useWishlist } from '../../context/WishlistContext';
 import { useAuth } from '../../context/AuthContext';
 import { products } from '../../data/products';
+import SEO from '../../components/SEO';
 import './ProductDetail.css';
 
 function ProductDetail() {
@@ -79,6 +80,13 @@ function ProductDetail() {
   return (
     <div className="product-detail-page">
       <div className="container">
+        <SEO
+          title={product.name}
+          description={product.description}
+          url={window.location.origin + `/product/${product.id}`}
+          image={product.image}
+          type="product"
+        />
         {/* Breadcrumb */}
         <nav className="breadcrumb">
           <Link to="/">Home</Link>
